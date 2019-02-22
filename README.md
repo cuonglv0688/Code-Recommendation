@@ -17,9 +17,9 @@
 ## Comments
 - One of the more common motivations for writing comments is bad code
 - Các comment nên dùng
-+ Comment liên quán đến tính pháp lý, bản quyền...
-+ Comment cảnh báo về hậu quả khi không dùng đoạn code đó
-+ Comment giải thích ý định
+  + Comment liên quán đến tính pháp lý, bản quyền...
+  + Comment cảnh báo về hậu quả khi không dùng đoạn code đó
+  + Comment giải thích ý định
 ## Class
 - Tạo class nhỏ nhất có thể (đo bằng số tính năng trong một class)
 - Nên mô tả class trong khoảng 25 từ sao cho không dùng các từ “if,” “and,” “or,” hoặc  “but.”. Nếu xuất hiện các từ đó thì class chưa phải là nhỏ nhất
