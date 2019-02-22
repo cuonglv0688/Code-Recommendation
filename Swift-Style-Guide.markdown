@@ -38,5 +38,5 @@ if the first argument forms part of a grammatical phrase, omit its label, append
 - Take extra care with unconstrained polymorphism (e.g. Any, AnyObject, and unconstrained generic parameters) to avoid ambiguities in overload sets
 - When creating custom delegate methods, an unnamed first parameter should be the delegate source.
 # Reference
-[1. API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
-[2. raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide)
+1. [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
+2. [raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide)
