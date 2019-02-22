@@ -38,6 +38,7 @@ if the first argument forms part of a grammatical phrase, omit its label, append
 - Take extra care with unconstrained polymorphism (e.g. Any, AnyObject, and unconstrained generic parameters) to avoid ambiguities in overload sets
 ## Delegate
 When creating custom delegate methods, an unnamed first parameter should be the delegate source.
+
 **Preferred**:
 ```swift
 func namePickerView(_ namePickerView: NamePickerView, didSelectName name: String)
@@ -48,6 +49,56 @@ func namePickerViewShouldReload(_ namePickerView: NamePickerView) -> Bool
 func didSelectName(namePicker: NamePickerViewController, name: String)
 func namePickerShouldReload() -> Bool
 ```
+## Use Type Inferred Context
+Use compiler inferred context to write shorter, clear code.
+
+**Preferred**:
+```swift
+let selector = #selector(viewDidLoad)
+view.backgroundColor = .red
+let toView = context.view(forKey: .to)
+let view = UIView(frame: .zero)
+```
+
+**Not Preferred**:
+```swift
+let selector = #selector(ViewController.viewDidLoad)
+view.backgroundColor = UIColor.red
+let toView = context.view(forKey: UITransitionContextViewKey.to)
+let view = UIView(frame: CGRect.zero)
+```
+
+## Code Organization
+Use extensions to organize your code into logical blocks of functionality. Each extension should be set off with a `// MARK: -` comment to keep things well-organized.
+
+## Protocol Conformance
+
+In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
+
+**Preferred**:
+```swift
+class MyViewController: UIViewController {
+  // class stuff here
+}
+
+// MARK: - UITableViewDataSource
+extension MyViewController: UITableViewDataSource {
+  // table view data source methods
+}
+
+// MARK: - UIScrollViewDelegate
+extension MyViewController: UIScrollViewDelegate {
+  // scroll view delegate methods
+}
+```
+
+**Not Preferred**:
+```swift
+class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
+  // all methods
+}
+```
+
 # References
 1. [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
 2. [raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide)
