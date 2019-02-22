@@ -33,5 +33,6 @@
 - Code không dùng nữa thì nên xoá đi không nên comment.
 - Luôn luôn test các điều kiện biên
 - Tìm và loại bỏ các dòng code trùng lặp khi có thể
-## Example
-[Some example](https://drive.google.com/open?id=1pEuiVJ0yh7p2SRn8j85n4AtiSqmZdJodntfRbNFWvmg)
+## More
+1. [SOLID](https://blog.bitsrc.io/solid-principles-every-developer-should-know-b3bfa96bb688)
+2. [Some example](https://drive.google.com/open?id=1pEuiVJ0yh7p2SRn8j85n4AtiSqmZdJodntfRbNFWvmg)
