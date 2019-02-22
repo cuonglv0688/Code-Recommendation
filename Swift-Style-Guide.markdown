@@ -36,7 +36,18 @@ if the first argument forms part of a grammatical phrase, omit its label, append
 - Label all other arguments
 - Label tuple members and name closure parameters where they appear in your API
 - Take extra care with unconstrained polymorphism (e.g. Any, AnyObject, and unconstrained generic parameters) to avoid ambiguities in overload sets
-- When creating custom delegate methods, an unnamed first parameter should be the delegate source.
-# Reference
+## Delegate
+When creating custom delegate methods, an unnamed first parameter should be the delegate source.
+**Preferred**:
+```swift
+func namePickerView(_ namePickerView: NamePickerView, didSelectName name: String)
+func namePickerViewShouldReload(_ namePickerView: NamePickerView) -> Bool
+```
+**Not Preferred**:
+```swift
+func didSelectName(namePicker: NamePickerViewController, name: String)
+func namePickerShouldReload() -> Bool
+```
+# References
 1. [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
 2. [raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide)
